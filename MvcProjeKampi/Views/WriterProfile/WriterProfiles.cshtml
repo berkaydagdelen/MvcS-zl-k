@@ -1,0 +1,84 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewBag.Title = "WriterProfiles";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<br />
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+                        <div class="text-center">
+                            <img class="profile-user-img img-fluid img-circle"
+                                 src="@Model.WriterImage" style="height:250px; width: 20%"
+                                 alt="User profile picture">
+                        </div>
+
+                        <h3  class="profile-username text-center">@Model.WriterName @Model.WriterSurName</h3>
+                        <p class="text-muted text-center">@Model.WriterTitle</p>
+
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                                <b>Takipçi</b> <a class="float-right">1,322</a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Takip Edilen</b> <a class="float-right">543</a>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Arkdaşlar</b> <a class="float-right">13,287</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- About Me Box -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Hakkımda</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <strong><i class="fas fa-book mr-1"></i> Eğitim</strong>
+
+                        <p class="text-muted">
+                           ODTÜ
+                        </p>
+
+                        <hr>
+
+                        <strong><i class="fas fa-map-marker-alt mr-1"></i> Konum</strong>
+
+                        <p class="text-muted">İZMİR, TURKEY</p>
+
+                        <hr>
+
+                        <strong><i class="fas fa-pencil-alt mr-1"></i> Yetenekler</strong>
+
+                        <p class="text-muted">
+                            <span class="tag tag-danger">@Model.WriterAbout</span>
+                          
+                        </p>
+
+                        <hr>
+
+                        
+                       
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
